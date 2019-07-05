@@ -1,4 +1,7 @@
 #!/bin/bash
+
+set -xv
+
 LOGFILE=/tmp/loadimage.log
 exec 3>&1
 exec > >(tee -a ${LOGFILE} >/dev/null) 2> >(tee -a ${LOGFILE} >&3)
